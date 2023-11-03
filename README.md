@@ -1,26 +1,71 @@
-<strong>** DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
+# WESTERN GOVERNOR UNIVERSITY --- D287 – JAVA FRAMEWORKS
 
-# WESTERN GOVERNOR UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
-Welcome to Java Frameworks! This is an opportunity for students to implement user interfaces and learn to leverage existing frameworks, assets, and content for object-oriented programming.
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-## BASIC INSTRUCTIONS
-For this project, you will use the Integrated Development Environment (IDE) link in the web links section of this assessment to install the IDE, IntelliJ IDEA (Ultimate Edition). All relevant links are on the course page. Please refer to the course of study for specific links. You will sign up for a free student license using your WGU.edu email address. Please see the “IntelliJ Ultimate Edition Instructions” attachment for instructions on how do this. Next you will download the “Inventory Management Application Template Code” provided in the web links section and open it in IntelliJ IDEA (Ultimate Edition). You will upload this project to a private external GitLab repository and backup regularly. As a part of this, you have been provided with a base code (starting point). 
+# Digital Express Electronics - Inventory Management System
 
-## SUPPLEMENTAL RESOURCES  
-1.	How to clone a project to IntelliJ using Git?
+This Inventory Management System is a customized software application built using the Spring Framework. It has a Java backend and an HTML front-end. The application is designed to help businesses track their inventory efficiently. It allows users to manage products, parts, and their respective quantities.
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+## Table of Contents
+- [Project Description](#project-description)
+- [Changes Made](#changes-made)
+- [Products and Parts](#products-and-parts)
+- [Contributors](#contributors)
 
-2. How to create a branch and start Development?
+## Changes Made
+## Parts C to J
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+### Part C
+File Name: 
+Line Number: 
+Changes Made:
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
+### Part D
+File Name: 
+Line Number: 
+Changes Made:
 
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
+### Part E
+File Name: 
+Line Number: 
+Changes Made:
+
+### Part F
+File Name: 
+Line Number: 
+Changes Made:
+
+### Part G
+File Name: 
+Line Number: 
+Changes Made:
+
+### Part H
+File Name: 
+Line Number: 
+Changes Made:
+
+### Part I
+File Name: 
+Line Number: 
+Changes Made:
+
+### Part J
+File Name: 
+Line Number: 
+Changes Made:
+
+
+## Products and Parts
+
+### Sample Products:
+**Smartphone Model X1**: A high-end smartphone with the latest features and technology.
+**Laptop Model L2**: A powerful laptop for work and entertainment.
+**Tablet Model T3**: A versatile tablet with a large touchscreen.
+**Wireless Headphones H4**: High-quality headphones for an immersive audio experience.
+**Portable Charger C5**: A portable charger with multiple USB ports for on-the-go charging.
+
+### Generic Parts:
+**Batteries**: Rechargeable batteries used in various electronic devices.
+**Microprocessors**: Essential components for the functioning of electronic gadgets.
+**LED Displays**: Displays used in smartphones, laptops, and tablets.
+**Motherboards**: The core component of computers and other devices.
+**Casing and Housing**: Protective cases and housing for electronic devices.
