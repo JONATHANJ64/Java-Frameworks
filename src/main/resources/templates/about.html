@@ -1,0 +1,84 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Custom Styles -->
+  <style>
+    .store-header, .parts-header {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .product-image, .part-image {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .product-description, .part-description {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+
+  <title>About Us - Digital Express Electronics</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="store-header">
+    <h1>About Us</h1>
+  </div>
+  <a th:href="@{/mainscreen.html}" class="btn btn-primary btn-sm mb-3" style="background-color: black; color: darkgrey; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px;">Back to Home</a>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Our Story</h2>
+      <p>
+        At Digital Express Electronics, we are proud to serve a diverse and loyal customer base. Our journey began with a
+        simple mission: to provide high-quality electronic products to our valued customers.
+      </p>
+      <p>
+        Over the years, our customers have become an integral part of our success story. Their trust and support have
+        fueled our growth and innovation.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <!-- Real image from Google -->
+      <img src="./images/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Our Team" class="img-fluid">
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <!-- Real image from Google -->
+      <img src="./images/damir-kopezhanov-nC6CyrVBtkU-unsplash.jpg" alt="Our Store" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <h2>Our Team</h2>
+      <p>
+        Our dedicated team is committed to delivering the best products and services to our customers. We believe that
+        our success is a direct result of our customers' satisfaction.
+      </p>
+      <p>
+        We value the feedback and input from our customers, and it continuously inspires us to improve and exceed
+        expectations.
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
