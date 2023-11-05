@@ -38,35 +38,28 @@ public class BootStrapData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
+        // Check if parts and products count is zero before adding the sample inventory
+        //!!! uncomment this code back out before you submit your project
+/*
+        if (partRepository.count() == 0 && productRepository.count() == 0) {
+            // Add 5 sample parts
+            for (int i = 1; i <= 5; i++) {
+                Part part = new Part();
+                part.setName("Part " + i);
+                part.setPrice(10.0 * i);
+                part.setInv(100 * i);
+                partRepository.save(part);
+            }
+            // Add 5 sample products
+            for (int i =  1; i <= 5; i++) {
+                Product product = new Product();
+                product.setName("Product " + i);
+                product.setPrice(100.0 * i);
+                product.setInv(15 * i);
+                productRepository.save(product);
+            }
         }
-
-        System.out.println(thePart.getCompanyName());
-        */
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            System.out.println(part.getName()+" "+part.getCompanyName());
-        }
-
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
-
+*/
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());
         System.out.println(productRepository.findAll());
