@@ -104,4 +104,17 @@ public class Product implements Serializable {
     public int hashCode() {
         return (int) (id ^ (id >>> 32));
     }
+
+    // Instruction F: buyProduct function to decrement inventory
+    // Uses a simple test to ensure product exists before decrementing
+    public boolean buyProduct() {
+        if (this.inv >= 1 ) {
+            this.inv--;
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 }
