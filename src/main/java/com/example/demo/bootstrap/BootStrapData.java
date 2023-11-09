@@ -2,15 +2,20 @@ package com.example.demo.bootstrap;
 
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
+import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
-
+import com.example.demo.service.OutsourcedPartService;
+import com.example.demo.service.OutsourcedPartServiceImpl;
+import com.example.demo.service.ProductService;
+import com.example.demo.service.ProductServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
@@ -63,96 +68,97 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(unicycle);
         */
 
-//        partRepository.deleteAll();
-//        productRepository.deleteAll();
-//        outsourcedPartRepository.deleteAll();
+//         Clearing repositories for multiple test runs
+         partRepository.deleteAll();
+         productRepository.deleteAll();
+         outsourcedPartRepository.deleteAll();
 
         if (partRepository.count() == 0) {
 
-            InhousePart batteries = new InhousePart();
-            batteries.setName("Batteries");
-            batteries.setPrice(10.99);
-            batteries.setInv(1000);
+            InhousePart Batteries = new InhousePart();
+            Batteries.setName("Batteries");
+            Batteries.setPrice(19.99);
+            Batteries.setInv(10);
 
-            InhousePart microprocessor = new InhousePart();
-            microprocessor.setName("Microprocessor");
-            microprocessor.setPrice(29.99);
-            microprocessor.setInv(500);
+            InhousePart MotherBoard = new InhousePart();
+            MotherBoard.setName("MotherBoard");
+            MotherBoard.setPrice(29.99);
+            MotherBoard.setInv(10);
 
-            InhousePart led_display = new InhousePart();
-            led_display.setName("LED Display");
-            led_display.setPrice(49.99);
-            led_display.setInv(300);
+            InhousePart CaseHouse = new InhousePart();
+            CaseHouse.setName("Casing & Housing");
+            CaseHouse.setPrice(39.99);
+            CaseHouse.setInv(10);
 
-            InhousePart motherboard = new InhousePart();
-            motherboard.setName("Motherboard");
-            motherboard.setPrice(79.99);
-            motherboard.setInv(200);
+            InhousePart Microprocessor = new InhousePart();
+            Microprocessor.setName("Microprocessor");
+            Microprocessor.setPrice(49.99);
+            Microprocessor.setInv(10);
 
-            InhousePart casing_housing = new InhousePart();
-            casing_housing.setName("Casing and Housing");
-            casing_housing.setPrice(59.99);
-            casing_housing.setInv(10);
+            InhousePart LED = new InhousePart();
+            LED.setName("LED Display");
+            LED.setPrice(59.99);
+            LED.setInv(10);
 
-            partRepository.save(batteries);
-            partRepository.save(microprocessor);
-            partRepository.save(led_display);
-            partRepository.save(motherboard);
-            partRepository.save(casing_housing);
+            partRepository.save(Batteries);
+            partRepository.save(MotherBoard);
+            partRepository.save(CaseHouse);
+            partRepository.save(Microprocessor);
+            partRepository.save(LED);
         }
 
         if (outsourcedPartRepository.count() == 0) {
 
-            OutsourcedPart sd100 = new OutsourcedPart();
-            sd100.setName("Storage Drive 100 GB");
-            sd100.setPrice(9.99);
-            sd100.setInv(50);
-            sd100.setCompanyName("XCorp");
+            OutsourcedPart ssd1000 = new OutsourcedPart();
+            ssd1000.setName("screw 0.2");
+            ssd1000.setPrice(19.99);
+            ssd1000.setInv(10);
+            ssd1000.setCompanyName("X-Group");
 
-            OutsourcedPart sd200 = new OutsourcedPart();
-            sd200.setName("Storage Drive 200 GB");
-            sd200.setPrice(19.99);
-            sd200.setInv(40);
-            sd200.setCompanyName("XCorp");
+            OutsourcedPart ssd2000 = new OutsourcedPart();
+            ssd2000.setName("screw 0.4");
+            ssd2000.setPrice(29.99);
+            ssd2000.setInv(10);
+            ssd2000.setCompanyName("X-Group");
 
-            OutsourcedPart sd300 = new OutsourcedPart();
-            sd300.setName("Storage Drive 300 GB");
-            sd300.setPrice(29.99);
-            sd300.setInv(30);
-            sd300.setCompanyName("XCorp");
+            OutsourcedPart ssd3000 = new OutsourcedPart();
+            ssd3000.setName("screw 0.6");
+            ssd3000.setPrice(39.99);
+            ssd3000.setInv(10);
+            ssd3000.setCompanyName("X-Group");
 
-            OutsourcedPart sd400 = new OutsourcedPart();
-            sd400.setName("Storage Drive 400 GB");
-            sd400.setPrice(39.99);
-            sd400.setInv(20);
-            sd400.setCompanyName("XCorp");
+            OutsourcedPart ssd4000 = new OutsourcedPart();
+            ssd4000.setName("screw 0.8");
+            ssd4000.setPrice(49.99);
+            ssd4000.setInv(10);
+            ssd4000.setCompanyName("X-Group");
 
-            OutsourcedPart sd500 = new OutsourcedPart();
-            sd500.setName("Storage Drive 500 GB");
-            sd500.setPrice(49.99);
-            sd500.setInv(10);
-            sd500.setCompanyName("XCorp");
+            OutsourcedPart ssd5000 = new OutsourcedPart();
+            ssd5000.setName("screw 1.0");
+            ssd5000.setPrice(59.99);
+            ssd5000.setInv(10);
+            ssd5000.setCompanyName("X-Group");
 
-            outsourcedPartRepository.save(sd100);
-            outsourcedPartRepository.save(sd200);
-            outsourcedPartRepository.save(sd300);
-            outsourcedPartRepository.save(sd400);
-            outsourcedPartRepository.save(sd500);
+            outsourcedPartRepository.save(ssd1000);
+            outsourcedPartRepository.save(ssd2000);
+            outsourcedPartRepository.save(ssd3000);
+            outsourcedPartRepository.save(ssd4000);
+            outsourcedPartRepository.save(ssd5000);
         }
 
         if (productRepository.count() == 0 ) {
 
-            Product comp_100 = new Product("Computer 100GB", 199.99, 15);
-            Product comp_200 = new Product("Computer 200GB", 299.99, 15);
-            Product comp_300 = new Product("Computer 300GB", 399.99, 15);
-            Product comp_400 = new Product("Computer 400GB", 499.99, 15);
-            Product comp_500 = new Product("Computer 500GB", 599.99, 15);
+            Product T1 = new Product("Computer", 199.99, 15);
+            Product T2 = new Product("Iphone", 299.99, 15);
+            Product T3 = new Product("Tablet", 399.99, 15);
+            Product T4 = new Product("Monitor", 499.99, 15);
+            Product T5 = new Product("Console System", 599.99, 15);
 
-            productRepository.save(comp_100);
-            productRepository.save(comp_200);
-            productRepository.save(comp_300);
-            productRepository.save(comp_400);
-            productRepository.save(comp_500);
+            productRepository.save(T1);
+            productRepository.save(T2);
+            productRepository.save(T3);
+            productRepository.save(T4);
+            productRepository.save(T5);
         }
 
         System.out.println("Started in Bootstrap");
