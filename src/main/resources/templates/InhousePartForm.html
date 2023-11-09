@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Inhouse Part Form</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
 <h1>Inhouse Part Detail</h1>
 <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST"}>
 
@@ -20,28 +12,33 @@
     <p>
         <label for="price">Price:</label>
         <input type="text" path="price" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4"/>
-        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</span>
+    <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
     </p>
 
     <p>
-        <label for="inv">Inventory:</label>
+        <label>Inventory:</label>
         <input type="text" path="inv" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/>
-        <span th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</span>
+    <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
     </p>
 
     <p>
-        <label for="minimum">Minimum:</label>
-        <input type="text" th:field="*{minimum}" placeholder="Minimum" class="form-control mb-4 col-4" />
+        <label>Part ID:</label>
+        <input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/>
     </p>
 
     <p>
-        <label for="maximum">Maximum:</label>
-        <input type="text" th:field="*{maximum}" placeholder="Maximum" class="form-control mb-4 col-4" />
+        <label>Minimum:</label>
+        <input type="text" th:field="*{minimum}" placeholder="Minimum" class="form-control mb-4 col-4"/>
     </p>
 
     <p>
-        <label for="partId">Part ID:</label>
-        <input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4" />
+        <label>Maximum:</label>
+        <input type="text" th:field="*{maximum}" placeholder="Maximum" class="form-control mb-4 col-4"/>
+    </p>
+
+    <p>
+        <label>Part ID:</label>
+        <input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/>
     </p>
 
     <p>
@@ -55,6 +52,8 @@
     <p><input type="submit" value="Submit" /></p>
 </form>
 
-<a href="http://localhost:8080/">Link to Main Screen</a>
-</body>
-</html>
+<p><errors path="price" cssClass=""error/><p>
+
+    <a href="http://localhost:8080/">Link to Main Screen</a>
+    </body>
+    </html>

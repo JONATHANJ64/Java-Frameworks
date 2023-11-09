@@ -15,24 +15,24 @@
     <p><input type="hidden" th:field="*{id}"/></p>
 
     <p>
-        <label for="name">Name:</label>
+        <label>Name:</label>
         <input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/>
     </p>
 
     <p>
-        <label for="price">Price:</label>
+        <label>Price:</label>
         <input type="text" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4"/>
         <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</span>
     </p>
 
     <p>
-        <label for="inv">Inventory:</label>
+        <label>Inventory:</label>
         <input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/>
         <span th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</span>
     </p>
 
     <p>
-        <label for="companyName">Company Name:</label>
+        <label>Company Name:</label>
         <input type="text" th:field="*{companyName}" placeholder="Company Name" class="form-control mb-4 col-4"/>
     </p>
 
