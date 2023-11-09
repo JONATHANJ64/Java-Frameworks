@@ -5,12 +5,12 @@
     <p><input type="hidden" th:field="*{id}"/></p>
 
     <p>
-        <label for="name">Name:</label>
+        <label>Name:</label>
         <input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/>
     </p>
 
     <p>
-        <label for="price">Price:</label>
+        <label>Price:</label>
         <input type="text" path="price" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4"/>
     <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
     </p>
