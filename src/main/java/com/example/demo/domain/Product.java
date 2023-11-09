@@ -106,7 +106,6 @@ public class Product implements Serializable {
     }
 
     // Instruction F: buyProduct function to decrement inventory
-    // Uses a simple test to ensure product exists before decrementing
     public boolean buyProduct() {
         if (this.inv >= 1 ) {
             this.inv--;
