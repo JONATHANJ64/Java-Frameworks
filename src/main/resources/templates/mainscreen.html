@@ -31,7 +31,7 @@
     <a th:href="@{/about.html}" class="btn btn-primary btn-sm mb-3" style="background-color: black; color: darkgrey; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 5px;">Learn More About Us</a>
 
     <h2>Shop Computers and Laptops Parts</h2>
-    <form th:action="@{/mainscreen}">
+    <form th:action="@{/mainscreen}" method="GET">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
@@ -55,19 +55,21 @@
             <td th:text="${tempPart.name}"></td>
             <td th:text="${tempPart.price}"></td>
             <td th:text="${tempPart.inv}"></td>
-            <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
-                <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
-                   onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
+            <td th:text="${tempPart.minimum}"></td>
+            <td th:text="${tempPart.maximum}"></td>
+            <td>
+                <a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+                <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3" onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
             </td>
         </tr>
         </tbody>
     </table>
 
-    <h2>Shop Computers and Laptops Prodcuts</h2>
+    <h2>Shop Computers and Laptops Products</h2>
     <div>
         <a th:href="@{/showFormAddProduct}" class="btn btn-primary btn-sm mb-3">Add Product</a>
     </div>
-    <label for="partkeyword">Filter Prodcut:</label>
+    <label for="partkeyword2">Filter Product:</label>
     <input type="text" id="partkeyword2" name="partkeyword" size="50" th:value="${partkeyword}" required />
     &nbsp;
     <input type="submit" value="Search" />
@@ -89,12 +91,10 @@
             <td th:text="${tempProduct.name}"></td>
             <td th:text="${tempProduct.price}"></td>
             <td th:text="${tempProduct.inv}"></td>
-
-            <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
-                <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
-                   onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
-                <a th:href="@{/buyproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
-                   onclick="if(!(confirm('Are you sure you want to purchase this product?')))return false">Buy Now</a>
+            <td>
+                <a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+                <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3" onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
+                <a th:href="@{/buyproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3" onclick="if(!(confirm('Are you sure you want to purchase this product?')))return false">Buy Now</a>
             </td>
         </tr>
         </tbody>
