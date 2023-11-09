@@ -63,6 +63,7 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(unicycle);
         */
 
+//        // Clearing repositories for multiple test runs
 //        partRepository.deleteAll();
 //        productRepository.deleteAll();
 //        outsourcedPartRepository.deleteAll();
