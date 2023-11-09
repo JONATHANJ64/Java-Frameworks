@@ -177,9 +177,9 @@ public class AddProductController {
         boolean purchaseConfirmation = product2.buyProduct();
         if ( purchaseConfirmation ) {
             productService.save(product2);
-            return "confirmationbuypart";
+            return "purchaseSuccess";
         }
 
-        return "errorbuypart";
+        return "purchaseError";
     }
 }
