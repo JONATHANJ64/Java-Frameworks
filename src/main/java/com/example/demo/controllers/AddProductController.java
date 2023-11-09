@@ -170,16 +170,19 @@ public class AddProductController {
     }
 
     @GetMapping("/buyproduct")
-    public String buyProduct(@RequestParam("productID") int theId, Model theModel ) {
+    public String buyProduct(@RequestParam("productID") int theId, Model theModel) {
         ProductService productService = context.getBean(ProductServiceImpl.class);
-        Product product2 = productService.findById(theId);
+        Product product = productService.findById(theId);
 
-        boolean purchaseConfirmation = product2.buyProduct();
-        if ( purchaseConfirmation ) {
-            productService.save(product2);
-            return "purchaseSuccess";
+        boolean purchaseConfirmation = product.buyProduct();
+
+        if (purchaseConfirmation) {
+            productService.save(product);
+            // Purchase successful, redirect to a success page
+            return "redirect:/purchaseSuccess";
+        } else {
+            // Purchase failed, redirect to an error page
+            return "redirect:/purchaseError";
         }
-
-        return "purchaseError";
     }
 }

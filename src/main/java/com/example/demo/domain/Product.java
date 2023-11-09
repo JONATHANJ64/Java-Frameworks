@@ -110,11 +110,22 @@ public class Product implements Serializable {
     public boolean buyProduct() {
         if (this.inv >= 1 ) {
             this.inv--;
+
+            for (Part part : this.getParts()) {
+                if (part.getInv() >= 1) {
+                    part.setInv(part.getInv() - 1);
+                } else {
+                    // Handle the case where the part inventory is insufficient
+                    return false;
+                }
+            }
+
+            // Product purchase was successful
             return true;
         } else {
+            // Handle the case where product inventory is insufficient
             return false;
         }
-
     }
 
 }
