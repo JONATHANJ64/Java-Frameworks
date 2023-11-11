@@ -32,11 +32,7 @@
   <div class="error-message">
     <h1>Purchase Error</h1>
     <p>There was an error with your purchase.</p>
-    <!--Display error messages for low inventory when adding and updating products-->
 
-    <div th:if="${#fields.hasErrors('parts')}">
-      <p th:each="error : ${#fields.errors('parts')}" th:text="${error}"></p>
-    </div>
     <a href="http://localhost:8080/">Link
       to Main Screen</a>
   </div>
