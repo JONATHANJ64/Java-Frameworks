@@ -48,7 +48,6 @@ public class ProductController {
 
     @GetMapping("/purchaseError")
     public String displayPurchaseError() {
-        return "purchaseError"; // Make sure this matches the template name
+        return "purchaseError";
     }
-
 }
