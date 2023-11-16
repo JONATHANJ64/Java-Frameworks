@@ -17,8 +17,6 @@ public class PartInventoryValidator implements ConstraintValidator < ValidPartIn
     @Autowired
     private ApplicationContext context;
 
-    public static  ApplicationContext myContext;
-
     @Override
     public void initialize(ValidPartInventory constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);

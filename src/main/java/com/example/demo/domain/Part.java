@@ -16,7 +16,6 @@ import java.util.Set;
  *
  *
  */
-
 @Entity
 @ValidDeletePart
 @ValidPartInventory
@@ -24,7 +23,7 @@ import java.util.Set;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
 @Table(name="Parts")
-public class Part implements Serializable {
+public abstract class Part implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
@@ -34,22 +33,14 @@ public class Part implements Serializable {
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
 
-    @ManyToMany
-    @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
-            inverseJoinColumns=@JoinColumn(name="product_id"))
-    Set<Product> products= new HashSet<>();
-
-    // Change for Sample inventory max and min
-
     @Min (value = 0, message = "Minimum inventory must be > 0")
     int minimum;
     int maximum;
 
-    public void setMinimum(int minimum) { this.minimum = minimum; }
-    public int getMinimum() { return this.minimum; }
-
-    public void setMaximum(int maximum) { this.maximum = maximum; }
-    public int getMaximum() { return this.maximum; }
+    @ManyToMany
+    @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
+            inverseJoinColumns=@JoinColumn(name="product_id"))
+    Set<Product> products= new HashSet<>();
 
     public Part() {
     }
@@ -58,6 +49,8 @@ public class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.minimum = 0;
+        this.maximum = 100;
     }
 
     public Part(long id, String name, double price, int inv) {
@@ -65,6 +58,8 @@ public class Part implements Serializable {
         this.name = name;
         this.price = price;
         this.inv = inv;
+        this.minimum = 0;
+        this.maximum = 100;
     }
 
     public long getId() {
@@ -99,9 +94,6 @@ public class Part implements Serializable {
         this.inv = inv;
     }
 
-    public Set<Product> getProducts() {
-        return products;
-    }
     public void validateLimits() {
         if (this.inv < this.minimum) {
             this.inv = this.minimum;
@@ -109,9 +101,20 @@ public class Part implements Serializable {
             this.inv = this.maximum;
         }
     }
+
+    public Set<Product> getProducts() {
+        return products;
+    }
+
     public void setProducts(Set<Product> products) {
         this.products = products;
     }
+
+    public void setMinimum(int minimum) { this.minimum = minimum; }
+    public int getMinimum() { return this.minimum; }
+
+    public void setMaximum(int maximum) { this.maximum = maximum; }
+    public int getMaximum() { return this.maximum; }
 
     public String toString(){
         return this.name;

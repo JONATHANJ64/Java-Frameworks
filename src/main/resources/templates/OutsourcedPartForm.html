@@ -30,6 +30,15 @@
         <input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/>
         <span th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</span>
     </p>
+    <p>
+        <label>Minimum:</label>
+        <input type="text" th:field="*{minimum}" placeholder="Minimum" class="form-control mb-4 col-4"/>
+    </p>
+
+    <p>
+        <label>Maximum:</label>
+        <input type="text" th:field="*{maximum}" placeholder="Maximum" class="form-control mb-4 col-4"/>
+    </p>
 
     <p>
         <label>Company Name:</label>
