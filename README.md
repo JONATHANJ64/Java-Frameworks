@@ -98,7 +98,7 @@ Unit tests for minimum and maximum inventory.
 
 ##  **Part J:**
 #### **ValidDeletePart (DeletePartValidator):**
-Prevents parts from being deleted if they're associated with a product.
+Prevents parts from being deleted if they're associated with a product. Used in the Parts.Java file.
 
 #### **ValidEnufParts (EnufPartsValidator):**
 Prevents adding additional product inventory if there isn't enough associated parts inventory.
@@ -112,3 +112,6 @@ Prevents modifying part inventory if the changes put it below the min threshold.
 #### **ValidProductPrice (PriceProductValidator):**
 Prevents charging less for the product than the sum cost of its associated parts.
 
+
+#### Unused Part Validator Deleted
+- DeletePartValidator 
