@@ -97,18 +97,22 @@ Annotation for inventory limits validation.
 Unit tests for minimum and maximum inventory.
 
 ##  **Part J:**
-#### **ValidDeletePart (DeletePartValidator):**
-Prevents parts from being deleted if they're associated with a product.
+### Removed Validators
 
-#### **ValidEnufParts (EnufPartsValidator):**
+##### **ValidDeletePart (DeletePartValidator):**
+Did not get used in final project completition for both the ValidDeletePart and DeletePartValidator. Messages still do appear for deleting associated part.
+
+## Kept Validators
+
+##### **ValidEnufParts (EnufPartsValidator):**
 Prevents adding additional product inventory if there isn't enough associated parts inventory.
 
-#### **ValidPartInventory (PartInventoryValidator):**
+##### **ValidPartInventory (PartInventoryValidator):**
 Prevents adding additional part inventory if it exceeds the specified max.
 
-####  **ValidPartInventoryMinimum (PartInventoryMinimumValidator):**
+#####  **ValidPartInventoryMinimum (PartInventoryMinimumValidator):**
 Prevents modifying part inventory if the changes put it below the min threshold.
 
-#### **ValidProductPrice (PriceProductValidator):**
+##### **ValidProductPrice (PriceProductValidator):**
 Prevents charging less for the product than the sum cost of its associated parts.
 
