@@ -111,7 +111,7 @@ public class Product implements Serializable {
             this.inv--;
 
             for (Part part : this.getParts()) {
-                if (part.getInv() >= 1) {
+                if (part.getInv() >= 2) {
                     part.setInv(part.getInv() - 1);
                 } else {
                     // Handle the case where the part inventory is insufficient

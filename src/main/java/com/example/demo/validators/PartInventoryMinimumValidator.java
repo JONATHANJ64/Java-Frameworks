@@ -3,6 +3,7 @@ package com.example.demo.validators;
 import com.example.demo.domain.Part;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
@@ -22,16 +23,9 @@ public class PartInventoryMinimumValidator implements ConstraintValidator < Vali
     public void initialize(ValidPartInventoryMinimum constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
     }
+
     @Override
     public boolean isValid(Part part, ConstraintValidatorContext constraintValidatorContext) {
-        if (part.getInv() >= part.getMinimum()) {
-            return true;
-        } else {
-            // Display a custom error message
-            constraintValidatorContext.buildConstraintViolationWithTemplate("Inventory cannot be lowered below the minimum value")
-                    .addPropertyNode("inv") // Specify the property
-                    .addConstraintViolation();
-            return false;
-        }
-        }
+        return part.getInv() > part.getMinimum();
+    }
 }
