@@ -79,26 +79,36 @@ public class BootStrapData implements CommandLineRunner {
             Batteries.setName("Batteries");
             Batteries.setPrice(19.99);
             Batteries.setInv(10);
+            Batteries.setMinimum(0);
+            Batteries.setMaximum(100);
 
             InhousePart MotherBoard = new InhousePart();
             MotherBoard.setName("MotherBoard");
             MotherBoard.setPrice(29.99);
             MotherBoard.setInv(10);
+            MotherBoard.setMinimum(0);
+            MotherBoard.setMaximum(100);
 
             InhousePart CaseHouse = new InhousePart();
             CaseHouse.setName("Casing & Housing");
             CaseHouse.setPrice(39.99);
             CaseHouse.setInv(10);
+            CaseHouse.setMinimum(0);
+            CaseHouse.setMaximum(100);
 
             InhousePart Microprocessor = new InhousePart();
             Microprocessor.setName("Microprocessor");
             Microprocessor.setPrice(49.99);
             Microprocessor.setInv(10);
+            Microprocessor.setMinimum(0);
+            Microprocessor.setMaximum(100);
 
             InhousePart LED = new InhousePart();
             LED.setName("LED Display");
             LED.setPrice(59.99);
             LED.setInv(10);
+            LED.setMinimum(0);
+            LED.setMaximum(100);
 
             partRepository.save(Batteries);
             partRepository.save(MotherBoard);
@@ -114,30 +124,40 @@ public class BootStrapData implements CommandLineRunner {
             ssd1000.setPrice(19.99);
             ssd1000.setInv(10);
             ssd1000.setCompanyName("X-Group");
+            ssd1000.setMinimum(0);
+            ssd1000.setMaximum(100);
 
             OutsourcedPart ssd2000 = new OutsourcedPart();
             ssd2000.setName("screw 0.4");
             ssd2000.setPrice(29.99);
             ssd2000.setInv(10);
             ssd2000.setCompanyName("X-Group");
+            ssd2000.setMinimum(0);
+            ssd2000.setMaximum(100);
 
             OutsourcedPart ssd3000 = new OutsourcedPart();
             ssd3000.setName("screw 0.6");
             ssd3000.setPrice(39.99);
             ssd3000.setInv(10);
             ssd3000.setCompanyName("X-Group");
+            ssd3000.setMinimum(0);
+            ssd3000.setMaximum(100);
 
             OutsourcedPart ssd4000 = new OutsourcedPart();
             ssd4000.setName("screw 0.8");
             ssd4000.setPrice(49.99);
             ssd4000.setInv(10);
             ssd4000.setCompanyName("X-Group");
+            ssd4000.setMinimum(0);
+            ssd4000.setMaximum(100);
 
             OutsourcedPart ssd5000 = new OutsourcedPart();
             ssd5000.setName("screw 1.0");
             ssd5000.setPrice(59.99);
             ssd5000.setInv(10);
             ssd5000.setCompanyName("X-Group");
+            ssd5000.setMinimum(0);
+            ssd5000.setMaximum(100);
 
             outsourcedPartRepository.save(ssd1000);
             outsourcedPartRepository.save(ssd2000);
